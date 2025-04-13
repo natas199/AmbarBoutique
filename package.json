@@ -1,9 +1,19 @@
 {
   "name": "AmbarBoutique",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "node apps/backend/server.js"
-  }
+    "dev": "yarn workspace @ambar/frontend dev",
+    "build": "yarn workspace @ambar/frontend build",
+    "start": "yarn workspace @ambar/frontend start"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.17"
+  },
+  "license": "MIT"
 }

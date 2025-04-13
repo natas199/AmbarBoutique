@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados */
+.client-card {
+    transition: all 0.2s ease-in-out;
+}
+
+.client-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Animaciones para el modal */
+.modal-enter {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.modal-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+
+.modal-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-exit-active {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 200ms ease-in, transform 200ms ease-in;
+}
+
+/* Estilos para el sidebar */
+.sidebar-collapsed {
+    width: 4rem;
+}
+
+.sidebar-expanded {
+    width: 16rem;
+}
+
+/* Estilos para los botones de acción */
+.action-button {
+    transition: all 0.2s ease-in-out;
+}
+
+.action-button:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para los estados de los clientes */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-active {
+    background-color: #DEF7EC;
+    color: #03543F;
+}
+
+.status-inactive {
+    background-color: #FDE8E8;
+    color: #9B1C1C;
+}
+
+/* Estilos para el formulario */
+.form-input:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #2563EB;
+}
+
+/* Estilos para la tabla de clientes */
+.client-table th {
+    background-color: #F9FAFB;
+    font-weight: 500;
+    text-align: left;
+    padding: 0.75rem 1rem;
+}
+
+.client-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.client-table tr:hover {
+    background-color: #F9FAFB;
+}
+
+/* Estilos personalizados para Ambar Boutique */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Animaciones */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 
